@@ -66,9 +66,9 @@
                                                         <small *ngIf="match.phase">{{match.phase}}</small>
                                                     </td>
                                                     <td>
-                                                        <img class="flag me-1" [src]="match.homeLogo">
+                                                        <img class="flag me-1" *ngIf="match.homeLogo && match.homeLogo.length>0" [src]="match.homeLogo">
                                                         <span class="team">{{match.homeTeam}}</span> vs. <span class="team">{{match.awayTeam}}</span>
-                                                        <img class="flag ms-1" [src]="match.awayLogo">
+                                                        <img class="flag ms-1" *ngIf="match.awayLogo && match.awayLogo.length>0" [src]="match.awayLogo">
                                                     </td>
                                                     <td class="text-start">
                                                         <app-pill-list [items]="match.tv"></app-pill-list>
@@ -97,12 +97,6 @@
                                                 [(ngModel)]="filter.selectedDate"
                                                 (ngModelChange)="doFilterData()"
                                                 placeholder="Data">
-                                                <ng-template ng-label-tmp let-item="item">
-                                                    {{item | date:'fullDate'}}
-                                                </ng-template>
-                                                <ng-template ng-option-tmp let-item="item" let-index="index">
-                                                    {{item | date:'fullDate'}}
-                                                </ng-template>
                                             </ng-select>
                                             -->
                                             <ng-select 
@@ -129,7 +123,7 @@
                                 <tbody>
                                     <ng-container *ngFor="let matchDay of matchDaysFiltered">
                                         <tr>
-                                            <td class="date" colspan="5"><span class="fecha">{{matchDay.date | date:'fullDate'}}</span></td>
+                                            <td class="date" colspan="5"><span class="fecha">{{matchDay}}</span></td>
                                         </tr>
                                         <ng-container *ngIf="matchDay.matches && matchDay.matches.length>0">
                                             <ng-container *ngFor="let match of matchDay.matches">
@@ -139,14 +133,24 @@
                                                             <div class="d-flex justify-content-between w-100">
                                                                 <div class="d-flex justify-content-start align-items-center">
                                                                     <div class="matchdate">{{match.date}}</div>
-                                                                    <img class="mobile_flag me-2" [src]="match.flag" />{{match.competition}}
+                                                                    <img class="mobile_flag me-2" [src]="match.flag" *ngIf="match.flag && match.flag.length>0" />{{match.competition}}
                                                                 </div>
-                                                                <div class="me-2"><a [href]="match.calendarUrl" target="_blank"><i class="fa fa-calendar"></i></a></div>
+                                                                <div class="me-2" *ngIf="match.calendarUrl && match.calendarUrl.length>0"><a [href]="match.calendarUrl" target="_blank"><i class="fa fa-calendar"></i></a></div>
                                                             </div>
-                                                            <div class="d-flex w-100 teams my-2">
-                                                                <span class="team me-2">{{match.homeTeam}}</span> vs. <span class="team ms-2">{{match.awayTeam}}</span>
+                                                            <div class="d-flex w-100 teams justify-content-center align-items-center">
+                                                                <img class="mobile_flag w-45" *ngIf="match.homeLogo && match.homeLogo.length>0" [src]="match.homeLogo">
+                                                                <div class="w-10 text-center">vs.</div>
+                                                                <img class="mobile_flag w-45" *ngIf="match.awayLogo && match.awayLogo.length>0" [src]="match.awayLogo">
                                                             </div>
-                                                            <div class="d-flex w-100 tvs">
+                                                            <div class="d-flex w-100 teams mb-3 justify-content-start align-items-center">
+                                                                <div class="w-50 d-flex justify-content-end me-3">
+                                                                    <span class="team">{{match.homeTeam}}</span>
+                                                                </div>
+                                                                <div class="w-50 d-flex justify-content-start ms-3">
+                                                                    <span class="team">{{match.awayTeam}}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex w-100 tvs" *ngIf="match.tv && match.tv.length>0">
                                                                 <small><app-pill-list [items]="match.tv"></app-pill-list></small>
                                                             </div>
                                                         </div>
