@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+body {
+    font-size: 13px;
+}
+
+table {
+    &.tableFixedHeader {
+        thead {
+            th {
+                position: sticky;
+                top: 0;
+                background: white; /* or your table header color */
+                z-index: 2; /* to stay above the table rows */
+                background-color: antiquewhite;
+            }
+        }
+    }
+
+    small {
+        color: #888 !important;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.w-10 { width: 10%; }
+.w-90 { width: 90%; }
+
+.br-0 { border-radius: 0px; }
+
+.page-title-band{
+    background-color: #edcea6;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 32px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4em 0.7em;
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 999px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+
+    &.dazn { background-color: #000000; color: white; }
+    &.amazon_prime_video { background-color: cornflowerblue; color: white; }
+    &.movistar_la_liga { background-color: deepskyblue; color: white; }
+    &.mplus_ellas_vamos { background-color: deepskyblue; color: white; }
+    &.movistar_plusplus { background-color: deepskyblue; color: white; }
+    &.movistarplus_lite { background-color: deepskyblue; color: white; }
+    &.movistarplus_vamos { background-color: deepskyblue; color: white; }
+    &.M+ Vamos
+    &.movistar_liga_de_campeones { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_1 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_2 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_3 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_4 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_5 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_6 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_7 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_8 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_9 { background-color: deepskyblue; color: white; }
+    &.movistar_liga_de_campeones_10 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_1 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_2 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_3 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_4 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_5 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_6 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_7 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_8 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_9 { background-color: deepskyblue; color: white; }
+    &.mplus_deportes_10 { background-color: deepskyblue; color: white; }
+    &.gol_stadium { background-color: #dc0028; color: white; }
+    &.gol_stadium_premium { background-color: #dc0028; color: white; }
+    &.gol_play { background-color: #dc0028; color: white; }
+    &.laligatv_hypermotion { background-color: antiquewhite; }
+    &.la_2 { background-color: aliceblue; }
+    &.rtve_play { background-color: aliceblue; }
+    &.teledeporte { background-color: aliceblue; }
+    &.telemadrid { background-color: white; color: #dc0028; }
+    &.tv_canaria { background-color: gold; color: darkslateblue; }
+    &.esport_3 { background-color: gold; color: #000000; }
+    &.real_madrid_tv { color: darkslateblue; }
+    &.barca_one { background-color: #e66980; color: darkslateblue; }
+}
+
+.matchdate {
+    width:45px;
+}
+.mobile_flag {
+    width: 20px;
+    height: 14px;
+}
+.teams, .tvs {
+    padding-left:45px;
+}

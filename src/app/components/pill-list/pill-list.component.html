@@ -1,0 +1,8 @@
+<div class="d-flex flex-wrap gap-2">
+    <ng-container *ngFor="let item of items; let last = last">
+      <span class="badge {{getItemClassName(item)}}">
+        {{ item }}
+      </span>
+      <!-- <span *ngIf="!last">,</span> -->
+    </ng-container>
+  </div>
