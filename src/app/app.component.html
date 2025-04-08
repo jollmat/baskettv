@@ -139,16 +139,17 @@
                                                                 </div>
                                                                 <div class="me-2" *ngIf="match.calendarUrl && match.calendarUrl.length>0"><a [href]="match.calendarUrl" target="_blank"><i class="fa fa-calendar"></i></a></div>
                                                             </div>
-                                                            <div class="d-flex w-100 teams mt-2 justify-content-center align-items-center">
-                                                                <img class="mobile_flag w-45" *ngIf="match.homeLogo && match.homeLogo.length>0" [src]="match.homeLogo">
+                                                            <div class="d-flex w-100 teams mt-2 mb-2 justify-content-center align-items-center">
+                                                                <div class="w-45 d-flex justify-content-center"><img class="mobile_flag" *ngIf="match.homeLogo && match.homeLogo.length>0" [src]="match.homeLogo"></div>
                                                                 <div class="w-10 text-center">vs.</div>
-                                                                <img class="mobile_flag w-45" *ngIf="match.awayLogo && match.awayLogo.length>0" [src]="match.awayLogo">
+                                                                <div class="w-45 d-flex justify-content-center"><img class="mobile_flag" *ngIf="match.awayLogo && match.awayLogo.length>0" [src]="match.awayLogo"></div>
                                                             </div>
                                                             <div class="d-flex w-100 teams mb-3 justify-content-start align-items-center">
-                                                                <div class="w-50 d-flex justify-content-end me-3">
+                                                                <div class="w-45 d-flex justify-content-center">
                                                                     <span class="team">{{match.homeTeam}}</span>
                                                                 </div>
-                                                                <div class="w-50 d-flex justify-content-start ms-3">
+                                                                <div class="w-10 text-center"></div>
+                                                                <div class="w-45 d-flex justify-content-center">
                                                                     <span class="team">{{match.awayTeam}}</span>
                                                                 </div>
                                                             </div>
