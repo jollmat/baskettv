@@ -41,6 +41,9 @@ table {
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-size: 32px;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
 }
 
 .badge {
